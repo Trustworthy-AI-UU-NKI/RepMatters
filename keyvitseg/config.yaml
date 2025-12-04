@@ -12,7 +12,7 @@ train:
   learning_rate: 0.00001
   train_batch_size: 4
   val_batch_size: 1
-  max_epochs: 5
+  max_epochs: 300
   num_workers: 10
   num_sanity_val_steps: 0
   seed: 1
