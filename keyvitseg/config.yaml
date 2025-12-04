@@ -1,0 +1,36 @@
+defaults:
+  - _self_
+
+data:
+  split_file: # path to .json file with data split
+  num_workers: 10
+  seed: 1
+  base_path: # path to the dataset
+  no_out_centres: False
+
+train:
+  learning_rate: 0.00001
+  train_batch_size: 4
+  val_batch_size: 1
+  max_epochs: 5
+  num_workers: 10
+  num_sanity_val_steps: 0
+  seed: 1
+  path_to_results: output_path
+  resume: False
+  resume_checkpoint_path: None
+  use_16bit: True
+
+extractor:
+  load_size: 224
+  stride: 8
+  model_type: 'dino_vits16' # Options: "dino_vits16", "dino_vits14", "dino_vits14R"
+  facet: 'key'
+  layer: 11 
+  version: '3' # Options: '1', '2', '3'
+  freeze: False
+
+wandb:
+  project_name: proposed_v3
+  wandb_name: fold_1_DG_caseA
+
