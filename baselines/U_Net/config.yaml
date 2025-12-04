@@ -1,0 +1,35 @@
+# config.yaml - U_Net
+
+defaults:
+  - _self_
+
+data:
+  split_file: "/projects/self_supervised_learning_chromoendoscopy/keyvitseg_essentials/gener_folds/fold_1_DG.json"
+  num_workers: 10
+  seed: 1
+  base_path: "/projects/self_supervised_learning_chromoendoscopy/Datasets/polypgen/"
+  save_dir: fold_1_DG/
+
+train:
+  learning_rate: 0.00001
+  train_batch_size: 4
+  val_batch_size: 1
+  max_epochs: 300
+  num_workers: 10
+  num_sanity_val_steps: 0
+  seed: 1
+  path_to_results: path_to_results
+  resume: False
+  resume_checkpoint_path: resume_checkpoint_path
+  use_16bit: True
+
+wandb:
+  project_name: UNet_umnetbaseblocks_folds
+  wandb_name: fold_1_DG
+
+debug: False
+
+unet:
+  n_channels: 3 
+  n_classes: 2 
+  bilinear: True
