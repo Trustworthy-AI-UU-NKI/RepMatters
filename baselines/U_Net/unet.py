@@ -1,4 +1,4 @@
-# Classical U-Net implementation
+# U-Net implementation adapted from https://github.com/milesial/Pytorch-UNet
 
 from pathlib import Path
 import lightning.pytorch as pl
