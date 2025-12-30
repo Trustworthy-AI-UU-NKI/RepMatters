@@ -61,7 +61,7 @@ def main(args: DictConfig) -> None:
   
     ### Get case ###
     if args.extractor.freeze:       
-        model.extractor.requires_grad_(False)  
+        model.extractor.requires_grad_ = False
         logging.info("EXTRACTOR WEIGHTS: frozen (case A!) ----------------------------------------")  
     else:
         logging.info("EXTRACTOR WEIGHTS: not frozen (case B!) ------------------------------------")
