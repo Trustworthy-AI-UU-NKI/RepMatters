@@ -12,7 +12,6 @@ from typing import List, Tuple
 import logging
 import torch.nn.functional as F
 from huggingface_hub import login
-login("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")
 from safetensors.torch import load_file
 
 # -----------------------------------------------------------------------------------------
