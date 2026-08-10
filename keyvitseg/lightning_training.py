@@ -42,7 +42,11 @@ class LightningTraining(pl.LightningModule):
         self.out_dice = []
 
     def configure_optimizers(self):
-        params_to_optimize = list(self.model.parameters())
+        params_to_optimize = [
+            param for param in self.model.parameters()
+            if param.requires_grad
+        ]
+    
         optimizer = optim.AdamW(params_to_optimize, lr=self.lr)
         return optimizer
     
