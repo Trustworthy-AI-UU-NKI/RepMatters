@@ -151,5 +151,3 @@ If you find this work or code useful in your research, please consider citing ou
 -->
 # Contact
 Carla Monteiro (carla.s.monteiro@inesctec.pt)
-
-For questions or issues regarding the code, please open a GitHub issue.
