@@ -11,7 +11,6 @@ from pathlib import Path
 from typing import List, Tuple
 import logging
 import torch.nn.functional as F
-from huggingface_hub import login
 from safetensors.torch import load_file
 
 # -----------------------------------------------------------------------------------------
