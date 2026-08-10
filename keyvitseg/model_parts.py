@@ -232,29 +232,6 @@ class ViTExtractor(nn.Module):
         model.interpolate_pos_encoding = types.MethodType(ViTExtractor._fix_pos_enc(patch_size, stride), model)
         return model
     
-    # dinov1 version
-    @staticmethod
-    # def patch_vit_resolution(model: nn.Module, stride: int) -> nn.Module:
-    #     """
-    #     change resolution of model output by changing the stride of the patch extraction.
-    #     :param model: the model to change resolution for.
-    #     :param stride: the new stride parameter.
-    #     :return: the adjusted model
-    #     """
-    #     patch_size = model.patch_embed.patch_size
-    #     if stride == patch_size:  # nothing to do
-    #         return model
-
-    #     stride = nn_utils._pair(stride)
-    #     assert all([(patch_size // s_) * s_ == patch_size for s_ in
-    #                 stride]), f'stride {stride} should divide patch_size {patch_size}'
-
-    #     # fix the stride
-    #     model.patch_embed.proj.stride = stride
-    #     # fix the positional encoding code
-    #     model.interpolate_pos_encoding = types.MethodType(ViTExtractor._fix_pos_enc(patch_size, stride), model)
-    #     return model
-    
     def _get_hook(self, facet: str):
         """
         Generate a hook method for a specific block and facet.
