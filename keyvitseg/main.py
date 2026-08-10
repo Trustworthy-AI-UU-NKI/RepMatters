@@ -61,11 +61,16 @@ def main(args: DictConfig) -> None:
   
     ### Get case ###
     if args.extractor.freeze:       
-        model.extractor.requires_grad_ = False
-        logging.info("EXTRACTOR WEIGHTS: frozen (case A!) ----------------------------------------")  
+        print("CASE A: Extractor is frozen!")
+        for param in model.extractor.parameters():
+            param.requires_grad = False
     else:
-        logging.info("EXTRACTOR WEIGHTS: not frozen (case B!) ------------------------------------")
+        print("CASE B: Extractor is unfrozen!")
+        for param in model.extractor.parameters():
+            param.requires_grad = True
 
+else:
+    raise ValueError(f"Unknown training case: {args.train.case}")
     ### Initialize the LightningTraining class ###
     TrainLight = LightningTraining(
         model = model,
