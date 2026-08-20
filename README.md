@@ -87,15 +87,12 @@ V3(B) → DINOv3 with fine-tuned encoder
 
 ---
 # Results
-<p align="center">
-  <img width="708" height="501" alt="image"
-       src="https://github.com/user-attachments/assets/546d1942-743b-41db-a5f2-6bb4c6f14133" />
-</p>
+# Results
 
 <p align="center">
-  <img width="1652" height="631" alt="image"
-       src="https://github.com/user-attachments/assets/3d6ae3f8-c443-47b9-81dd-0abc484f1c23" />
+  <img src="figures/results.png" width="708" alt="Main results">
 </p>
+
 
 # Training
 
