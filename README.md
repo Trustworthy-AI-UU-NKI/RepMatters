@@ -87,7 +87,6 @@ V3(B) → DINOv3 with fine-tuned encoder
 
 ---
 # Results
-# Results
 
 <p align="center">
   <img src="figures/results.png" width="708" alt="Main results">
